@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Moonday Hotel Dijital & SEO Analiz Sunumu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moonday Hotel için premium dijital, SEO ve teknik analiz sunumu">
+  <link rel="icon" type="image/png" href="https://moondayhotel.com/wp-content/uploads/2023/11/Adsiz-tasarim-47.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #f5f7f6;
+      --main-dark: #294046;
+      --accent: #dca44a;
+      --accent-dark: #b88a2e;
+      --card-bg: #fff;
+      --card-shadow: 0 8px 32px rgba(41,64,70,0.09);
+      --title-font: 'Playfair Display', serif;
+      --text-font: 'Montserrat', Arial, sans-serif;
+      --anim-in: fadeIn 0.7s cubic-bezier(.52,1.8,.62,.87);
+    }
+    body {
+      margin: 0; padding: 0;
+      min-height: 100%;
+      font-family: var(--text-font);
+      background: var(--main-bg);
+      color: var(--main-dark);
+    }
+    .container {
+      max-width: 1080px;
+      margin: 2.2rem auto;
+      padding: 2.5rem 2rem 1rem 2rem;
+      background: transparent;
+      border-radius: 32px;
+      position: relative;
+      z-index: 1;
+      animation: var(--anim-in);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .logo-row {
+      text-align: center; margin-bottom: 1.5rem;
+    }
+    .logo-row img {
+      height: 76px; background: #fff;
+      border-radius: 18px; padding: 14px 38px;
+      box-shadow: 0 8px 32px rgba(220,164,74,0.13), 0 2.5px 8px rgba(41,64,70,0.07);
+      transition: box-shadow 0.2s;
+    }
+    .logo-row img:hover {
+      box-shadow: 0 12px 38px #dca44a55, 0 3px 14px #29404622;
+      transform: scale(1.05) rotate(-2deg);
+    }
+    h1 {
+      font-family: var(--title-font);
+      font-size: 2.6rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-shadow: 0 3px 22px #29404612;
+      text-align: center;
+      letter-spacing: 0.03em;
+      animation: var(--anim-in);
+    }
+    h2 {
+      font-size: 1.55rem;
+      margin-top: 0.8rem;
+      margin-bottom: 1.1rem;
+      color: var(--main-dark);
+      border-left: 7px solid var(--accent);
+      padding-left: 18px;
+      font-family: var(--title-font);
+      background: linear-gradient(90deg, #fff 70%, #f9f4e8 100%);
+      border-radius: 0 28px 28px 0;
+      box-shadow: 0 1.5px 8px #dca44a17;
+      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    h2:hover { background: linear-gradient(90deg, #f9f4e8 80%, #fff 100%); color: var(--accent-dark);}
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px) saturate(130%);
+      border-radius: 22px;
+      box-shadow: var(--card-shadow);
+      padding: 2rem 2.3rem;
+      margin-bottom: 2.3rem;
+      border: 2px solid #eee;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.2s, transform 0.13s, border 0.25s;
+      animation: var(--anim-in);
+    }
+    .card:hover {
+      box-shadow: 0 14px 42px #dca44a40, 0 5px 18px #29404622;
+      border: 2px solid var(--accent);
+      transform: translateY(-6px) scale(1.018);
+      background: #fffbe9;
+      z-index: 2;
+    }
+    .btn-main {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--accent) 40%, #fff1c9 100%);
+      color: #294046;
+      padding: 0.72em 2.0em;
+      font-size: 1.17em;
+      font-family: var(--text-font);
+      font-weight: 700;
+      border: none;
+      border-radius: 38px;
+      box-shadow: 0 2px 14px #dca44a60;
+      cursor: pointer;
+      margin: 1.1em 0 0.8em 0;
+      letter-spacing: 0.04em;
+      transition: background 0.19s, box-shadow 0.18s, transform 0.17s, color 0.16s;
+      outline: none;
+    }
+    .btn-main:hover, .btn-main:focus {
+      background: linear-gradient(90deg, #fff1c9 10%, var(--accent-dark) 90%);
+      box-shadow: 0 8px 28px #dca44a90, 0 2px 10px #29404620;
+      transform: scale(1.07);
+      color: #fff;
+      text-shadow: 0 2px 10px #dca44a40;
+    }
+    .swot-list { display: flex; flex-wrap: wrap; gap: 1.1rem; list-style: none; padding: 0; margin: 0;}
+    .swot-list li {
+      flex: 1 1 260px;
+      background: #fffbe6;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px #dca44a12;
+      padding: 1.1rem 1.1rem;
+      min-width: 190px;
+      font-size: 1.09rem;
+      border: 1.6px solid #f9e3aa;
+      transition: background 0.15s, border 0.18s, box-shadow 0.15s;
+      display: flex; align-items: flex-start; gap: 8px;
+      animation: var(--anim-in);
+      cursor: pointer;
+    }
+    .swot-list li:hover {
+      background: #fff6d6;
+      border: 1.6px solid var(--accent-dark);
+      box-shadow: 0 4px 18px #dca44a37;
+      transform: scale(1.04);
+    }
+    .screenshot { max-width: 96%; border-radius: 14px; margin: 1.3rem 0; box-shadow: 0 2px 16px #29404625;}
+    ul { margin-left: 1.7rem;}
+    li { margin-bottom: 0.9em;}
+    .footer {
+      background: var(--main-dark);
+      color: #fff; padding: 2rem 0 1.3rem 0;
+      text-align: center; margin-top: 3.2rem;
+      border-radius: 0 0 26px 26px;
+      font-size: 1.13rem; letter-spacing: 0.04em;
+      box-shadow: 0 -2px 12px #dca44a07;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 0.7rem;}
+      h1 { font-size: 1.2rem;}
+      .logo-row img { height: 38px;}
+      .card { padding: 1rem 0.7rem; border-radius: 11px;}
+      .swot-list { gap: 0.5rem;}
+      .swot-list li { font-size: 0.97rem; min-width: 130px;}
+      .screenshot { border-radius: 7px;}
+      h2 { font-size: 1.01rem; border-radius: 0 13px 13px 0; padding-left: 10px;}
+    }
+    a { color: var(--accent-dark); text-decoration: underline; font-weight: 500;}
+    a:hover { color: #294046; background: #fffbe9;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-row">
+      <img src="image3" alt="Moonday Hotel Logo">
+    </div>
+    <h1>Moonday Hotel Dijital & SEO Analiz Sunumu</h1>
+    <div style="text-align:right; font-size:1.08em;"><b>Hazırlayan:</b> YKBSOFT | Ağustos 2025</div>
+    
+    <div class="section card">
+      <h2>🎯 Marka Hedefi & Dijital Vizyon</h2>
+      <ul>
+        <li>Moonday Hotel, <b>Google’da haritalarda ve lokal aramalarda üst sıralarda</b> çıkmak için SEO odaklı bir yapılanmaya ihtiyacı olduğunu belirtmiştir.</li>
+        <li>Web sitesi, <b>anında ve güvenli rezervasyon</b> akışı ile online satış ve müşteri kazanımını hedeflemelidir.</li>
+        <li>Modern ve prestijli marka algısı için <b>responsive, hızlı ve kullanıcı dostu</b bir deneyim sunmak gerekmektedir.</li>
+        <li>Otel sektöründe <b>Google My Business</b> ve “Kayseri otel” gibi lokal aramalarda görünürlük, dijitalde başarı için kritiktir.</li>
+        <li><b>Blog ve içerik üretimiyle</b> bölge ve otel temalı aramalarda trafik artışı sağlanabilir.</li>
+      </ul>
+    </div>
+
+    <div class="section card">
+      <h2>📅 Rezervasyon Yönetimi & Kullanıcı Deneyimi</h2>
+      <ul>
+        <li>Rezervasyon ve iletişim akışı, <b>mobilde ve masaüstünde kolayca erişilebilir</b olmalı.</li>
+        <li>Harici rezervasyon altyapısına (moondayhotel.rezervasyonal.com) bağlantı, güvenli ve hızlı olmalı; <b>siteye entegre rezervasyon modülü</b önerilir.</li>
+        <li>Misafirlere kolay rezervasyon sunmak için <b>çok adımlı formlar</b yerine, tek ekranlı hızlı rezervasyon tasarımı tavsiye edilir.</li>
+        <li>Google Maps, WhatsApp ve telefonla hızlı iletişim butonları ana sayfa ve üst menüde yer almalı.</li>
+      </ul>
+      <div><button class="btn-main" onclick="window.open('https://moondayhotel.com/', '_blank')">Siteye Git & Rezervasyon</button></div>
+    </div>
+
+    <div class="section card">
+      <h2>📊 SWOT Analizi</h2>
+      <ul class="swot-list">
+        <li>💪 <b>Güçlü Yönler:</b><br>Modern tasarım, merkezi konum, güçlü marka, mobil uyumlu ve responsive site, yapılandırılmış veri, ALT etiketleri eksiksiz, blog içerikleri zengin.</li>
+        <li>⚠️ <b>Zayıf Yönler:</b><br>Site hızı düşük (PageSpeed skorları zayıf), meta açıklama eksikliği, sosyal medya meta etiketleri yok, rezervasyon harici, font boyutları yetersiz, 404 sayfası yok.</li>
+        <li>🚀 <b>Fırsatlar:</b><br>Google Maps ve lokal SEO’da öne çıkma potansiyeli, OpenGraph ve Twitter Card ile sosyal paylaşımlarda premium görünüm, blog ve rehber içerikleriyle trafik artırımı.</li>
+        <li>⚔️ <b>Tehditler:</b><br>Rakip otellerde teknik olarak optimize ve hızlı siteler, yavaş site nedeniyle rezervasyon kaybı, eksik sosyal medya entegrasyonu, harici rezervasyon altyapısına bağımlılık.</li>
+      </ul>
+    </div>
+    
+    <div class="section card">
+      <h2>⚡ PageSpeed Performans Analizi (Mobil)</h2>
+      <img class="screenshot" src="image2" alt="Mobil PageSpeed Önemli Web Verileri">
+      <img class="screenshot" src="image1" alt="Mobil PageSpeed Performans Skoru">
+      <ul>
+        <li><b>Performans Skoru:</b> 33/100</li>
+        <li><b>En büyük sorunlar:</b> LCP (Largest Contentful Paint) 5,7 sn ve 38,1 sn; FCP ve TTFB değerleri yüksek (3,1 sn - 4,4 sn ve 2,2 sn).</li>
+        <li><b>Cumulative Layout Shift (CLS):</b> 0,98 ve 0,864; sayfa kaymaları ve görsel/element sıçramaları mevcut.</li>
+        <li><b>Öneriler:</b>
+          <ul>
+            <li>Resimleri <b>WebP/AVIF formatına</b> dönüştürerek ve sıkıştırarak yayınlayın.</li>
+            <li>Kullanılmayan JS/CSS dosyalarını temizleyin, <b>kritik CSS’i satır içi</b ekleyin.</li>
+            <li><b>Lazy-load</b> ile ekran dışı görselleri geç yükleyin.</li>
+            <li>Sunucu tarafı <b>cache ve CDN entegrasyonu</b> sağlayın.</li>
+            <li>Fontları optimize edin; Google Fonts önbelleklemesi, harici font yerine local font kullanımı önerilir.</li>
+            <li>Dosya sıkıştırma (gzip/brotli) ve HTTP header optimizasyonu yapılmalı.</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="btn-main" style="margin-top:1rem;" onclick="window.open('https://developers.google.com/speed/pagespeed/insights/?url=moondayhotel.com', '_blank')">Detaylı PageSpeed Raporu</div>
+    </div>
+    
+    <div class="section card">
+      <h2>🔎 SEO Teknik Analiz & Raporu</h2>
+      <ul>
+        <li><b>Meta Title:</b> Doğru; markayı ve konsepti yansıtıyor.</li>
+        <li><b>Meta Description:</b> Çok kısa, mutlaka zenginleştirilmeli. (Örn: “Kayseri’nin kalbinde, modern ve konforlu odalar, spa ve restoran ile ayrıcalıklı konaklama deneyimi!”)</li>
+        <li><b>Meta Keyword:</b> Pasif, eklenmemeli.</li>
+        <li><b>Meta Author/Publisher:</b> Eksik; site sahibi ve yayımcı bilgisi eklenmeli.</li>
+        <li><b>Meta Robots:</b> Doğru, “max-image-preview:large” kullanılıyor.</li>
+        <li><b>Twitter Card ve Facebook Open Graph:</b> Eksik; sosyal medya paylaşımları için mutlaka eklenmeli. (Örn: Otel fotoğrafı, başlık, açıklama, logo)</li>
+        <li><b>Meta Charset:</b> Eksik; UTF-8 charset eklenmeli.</li>
+        <li><b>Sayfa Dil Etiketi:</b> “tr” mevcut, doğru.</li>
+        <li><b>Dış Linkler:</b> Dofollow ile harici rezervasyon ve sosyal medya linkleri verilmiş, nofollow link yok; gereksiz dış linklerden kaçının.</li>
+        <li><b>Heading Etiketleri:</b> Doğru ve zengin; H2/H3 dengesi iyi, anahtar kelime odaklı başlıklar önerilir.</li>
+        <li><b>Font Boyutları:</b> Okunabilirlik için font-size değerleri gözden geçirilmeli (min 16px).</li>
+        <li><b>Yapılandırılmış Veri:</b> Aktif, olumlu; “Hotel”, “Organization” ve “LocalBusiness” schema eklenmeli.</li>
+        <li><b>404 Sayfası:</b> Eksik; markaya özel, kullanıcıyı yönlendiren bir 404 sayfası oluşturulmalı.</li>
+        <li><b>Canonical Link:</b> Mevcut, doğru.</li>
+        <li><b>IFrame Kullanımı:</b> Yok, olumlu.</li>
+        <li><b>AMP:</b> Kullanılmıyor, isteğe bağlı.</li>
+        <li><b>Favicon:</b> Var, marka için olumlu.</li>
+        <li><b>Responsive Tasarım & Mobil Uyumluluk:</b> Aktif, olumlu.</li>
+        <li><b>ALT Etiketleri:</b> Tüm görsellerde mevcut, olumlu.</li>
+        <li><b>Title Etiketi Olmayan Linkler:</b> Birçok linkte açıklama eksik; “title” eklenmeli.</li>
+        <li><b>Sunucu Yapılandırması:</b> DNS ve bağlantı süreleri iyi; dosya sıkıştırma ve HTTP header optimizasyonu eksik.</li>
+      </ul>
+    </div>
+
+    <div class="section card">
+      <h2>📌 Anahtar Kelime Analizi & Lokal SEO</h2>
+      <ul>
+        <li>En sık kullanılan kelimeler: "moonday", "oda", "spa", "modern", "daha fazla", "özel".</li>
+        <li>Otel anahtar kelimeleri ve lokal SEO için öneriler:
+          <ul>
+            <li>“kayseri otel”, “kayseri spa”, “aile oteli kayseri”, “erciyes konaklama”, “modern otel kayseri” gibi long-tail anahtar kelimeler içerikte ve title/meta’da kullanılmalı.</li>
+            <li>Google Maps, Yandex Harita ve Tripadvisor için <b>optimize profil</b> oluşturulmalı.</li>
+            <li>Blog içerikleri: “Kayseri’de Gezilecek Yerler”, “Spa Otelleri”, “Erciyes Kayak Rehberi” gibi aramalara yönelik makaleler hazırlanmalı.</li>
+            <li>Rezervasyon sayfasında ve ana sayfa başlıklarında “online rezervasyon”, “anında rezervasyon”, “en iyi fiyat garantisi” gibi CTA kullanımı artırılmalı.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      Moonday Hotel Dijital & SEO Sunumu – Ağustos 2025<br>
+      Hazırlayan: YKBSOFT | Tüm hakları saklıdır.
+    </div>
+  </div>
+</body>
+</html>
